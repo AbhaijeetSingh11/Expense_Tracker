@@ -30,12 +30,12 @@ app.use("/api/v1/dashboard", dashboardRoutes);
 
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
-// const PORT = process.env.PORT || 5000;
-// app.listen(PORT, () => {
-//     console.log(`Server is running on port ${PORT}`);
-// });
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
 
-module.exports = app;
-// api/index.js (continued)
-const serverless = require("serverless-http");
-module.exports = serverless(app);
+// module.exports = app;
+// // api/index.js (continued)
+// const serverless = require("serverless-http");
+// module.exports = serverless(app);
